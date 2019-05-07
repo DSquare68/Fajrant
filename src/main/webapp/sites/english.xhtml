@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+<head>
+
+	<link href="../css/english.css" rel="stylesheet" type="text/css"/>
+	<title>Insert title here</title>
+</head>
+<body>
+	<h:form enctype="multipart/form-data"  styleClass="form-lesson-update" prependId="false">
+		<h:selectOneMenu valueChangeListener="#{uploadLesson.languageUploaded}">
+			<f:selectItem itemValue="english" itemLabel="Angielski"/>
+			<f:selectItem itemValue="french" itemLabel="Francuski"/>
+		</h:selectOneMenu>
+		<h:inputFile value="#{uploadLesson.file}"  styleClass="input-file-lesson" />
+		<h:commandButton value="Save" type="submit" action="#{uploadLesson.upload}" ></h:commandButton>
+	</h:form>
+	<form method="post" action="languageSelect" id="form_language_submit">
+		<select name="language">
+			<option value="english">Angielski</option>
+			<option value="french">Francuski</option>
+		</select>
+		<p>Number lekcji</p>
+		<select name="number_of_lesson" id="lesson_number">
+		</select>
+		<p>Ilość słówek:</p>
+		<input name="number_of_words" type="number"/>
+		<button type="submit">Gotowe</button>
+	</form>
+</body>
+</html>

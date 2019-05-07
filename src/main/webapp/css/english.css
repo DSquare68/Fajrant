@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+body{
+	background-color: #878787;
+}
+
+#form_language_submit > p{
+	display: inline-block;
+}
+<!-- remember how it works-->
+.form-lesson-update .input-file-lesson { 
+  	color: red;  
+}
